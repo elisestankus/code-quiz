@@ -22,3 +22,11 @@
 #endPage {
     display: none;
 }
+
+#prevQcorrect {
+    display: none;
+}
+
+#prevQincorrect {
+    display: none;
+}

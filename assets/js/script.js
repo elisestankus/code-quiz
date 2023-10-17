@@ -13,3 +13,38 @@ var submitScore = document.querySelector("#submitScore")
 var initialsInput = document.querySelector("#yourInitials")
 
 var timeEl = document.querySelector("#time")
+
+//Q1
+
+var correctansq1 = document.querySelector("#correctQ1");
+var incorrectans0q1 = document.querySelector("#incorrect0Q1")
+var incorrectans1q1 = document.querySelector("#incorrect1Q1")
+var incorrectans2q1 = document.querySelector("#incorrect2Q1")
+
+//Q2
+
+var correctansq2 = document.querySelector("#correctQ2");
+var incorrectans0q2 = document.querySelector("#incorrect0Q2")
+var incorrectans1q2 = document.querySelector("#incorrect1Q2")
+var incorrectans2q2 = document.querySelector("#incorrect2Q2")
+
+//Q3
+
+var correctansq3 = document.querySelector("#correctQ3");
+var incorrectans0q3 = document.querySelector("#incorrect0Q3")
+var incorrectans1q3 = document.querySelector("#incorrect1Q3")
+var incorrectans2q3 = document.querySelector("#incorrect2Q3")
+
+//Q4
+
+var correctansq4 = document.querySelector("#correctQ4");
+var incorrectans0q4 = document.querySelector("#incorrect0Q4")
+var incorrectans1q4 = document.querySelector("#incorrect1Q4")
+var incorrectans2q4 = document.querySelector("#incorrect2Q4")
+
+//Q5
+
+var correctansq5 = document.querySelector("#correctQ5");
+var incorrectans0q5 = document.querySelector("#incorrect0Q5")
+var incorrectans1q5 = document.querySelector("#incorrect1Q5")
+var incorrectans2q5 = document.querySelector("#incorrect2Q5")

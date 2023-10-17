@@ -1,4 +1,4 @@
-//declared my variables globally so they are available to all functions that need them
+//declared variables globally so they are available to all functions that need them
 //these variables allow the JS to access the html elements
 var start = document.querySelector("#start")
 
@@ -53,6 +53,9 @@ start.addEventListener("click", function(){
     showQ1();
 })
 
+//show functions alter css display style to show active sections and hide inactive sections
+//showIntro resets secondsLeft to 75
+
 function showIntro() {
     hsPage.style.display = "none";
     prevQincorrect.style.display= "none";
@@ -95,6 +98,9 @@ function showhs() {
     prevQcorrect.style.display = "none";
 }
 
+//incorrect/correct message functions alter css display styles to show the active message and hide the inactive message
+//the incorrectMessage function also deducts 10 seconds from the timer
+
 function incorrectMessage() {
     secondsLeft = secondsLeft -10;
     prevQincorrect.style.display= "block";
@@ -106,6 +112,7 @@ function correctMessage() {
     prevQincorrect.style.display = "none";
 }
 
+//show endPage function hides all question sections, shows the endpage, and stops the timer. it also sets the score as the secondsLeft var
 
 function showendPage() {
     Q1.style.display = "none";
@@ -118,17 +125,23 @@ function showendPage() {
     score.textContent = "Your final score is " + secondsLeft + "!";
 }
 
+//push adds the newScore object to the end of the highScore array
 function submitNewScore() {
     highScores.push(newScore);
     console.log(highScores)
 }
 
+//setItem method adds key name (highScores) and value to local storage
+//use getItem to assign local storage to declared var
+//JSON.stringify turns highScores data into strings so it can be stored locally
+//JSON.parse turns locally stored strings back into regular data
 function storeHS() {
     localStorage.setItem("highScores", JSON.stringify(highScores));
     storedHS = JSON.parse(localStorage.getItem("highScores"));
     console.log(storedHS)
 }
 
+//updateHS adds new scores to the high scores list
 function updateHS() {
     hsList.innerHTML = "";
     for (var i = 0; i < highScores.length; i++) {
@@ -277,4 +290,25 @@ incorrectans1q5.addEventListener("click", function() {
 incorrectans2q5.addEventListener("click", function() {
     incorrectMessage();
     showendPage();
+})
+
+//submitScore reassigns newScore property values based on secondsLeft and user intials input, then calls submitNewScore, storeHS, updateHS, and showhs functions
+
+submitScore.addEventListener("click", function(event){
+    event.preventDefault();
+    newScore = {
+        score: secondsLeft,
+        initials: initialsInput.value,
+    }
+    submitNewScore();
+    storeHS();
+    updateHS();
+    showhs();
+})
+
+//backBTN returns user to the intro page
+
+backBTN.addEventListener("click", function(event) {
+    event.preventDefault();
+    showIntro();
 })

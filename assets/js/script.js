@@ -7,3 +7,9 @@ var Q3 = document.querySelector("#Q3")
 var Q4 = document.querySelector("#Q4")
 var Q5 = document.querySelector("#Q5")
 var endPage = document.querySelector("#endPage")
+
+var score = document.querySelector("#score")
+var submitScore = document.querySelector("#submitScore")
+var initialsInput = document.querySelector("#yourInitials")
+
+var timeEl = document.querySelector("#time")

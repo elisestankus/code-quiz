@@ -1,3 +1,4 @@
+var start = document.querySelector("#start")
 
 var intro = document.querySelector("#intro")
 var Q1 = document.querySelector("#Q1")

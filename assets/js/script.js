@@ -155,6 +155,13 @@ function updateHS() {
       }
 }
 
+//viewhs calls updateHS and shows hs
+viewhs.addEventListener("click", function(event){
+    event.preventDefault();
+    updateHS();
+    showhs();
+})
+
 
 //Q1
 

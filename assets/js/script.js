@@ -19,6 +19,10 @@ var timerInterval = ''
 var hsPage = document.querySelector("#high-scores");
 var viewhs = document.querySelector("#viewhs");
 
+var highScores = [];
+
+var storedHS = [];
+
 var hsList = document.querySelector("#hsList");
 
 var backBTN = document.querySelector("#back")

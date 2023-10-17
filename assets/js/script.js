@@ -105,6 +105,11 @@ function showendPage() {
     score.textContent = "Your final score is " + secondsLeft + "!";
 }
 
+function submitNewScore() {
+    highScores.push(newScore);
+    console.log(highScores)
+}
+
 //Q1
 
 var correctansq1 = document.querySelector("#correctQ1");

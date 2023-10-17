@@ -14,6 +14,7 @@ var initialsInput = document.querySelector("#yourInitials")
 
 var timeEl = document.querySelector("#time")
 var secondsLeft = 75;
+var timerInterval = ''
 
 var hsPage = document.querySelector("#high-scores");
 var viewhs = document.querySelector("#viewhs");

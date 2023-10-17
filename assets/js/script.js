@@ -14,6 +14,13 @@ var initialsInput = document.querySelector("#yourInitials")
 
 var timeEl = document.querySelector("#time")
 
+var hsPage = document.querySelector("#high-scores");
+var viewhs = document.querySelector("#viewhs");
+
+var hsList = document.querySelector("#hsList");
+
+var backBTN = document.querySelector("#back")
+
 //Q1
 
 var correctansq1 = document.querySelector("#correctQ1");

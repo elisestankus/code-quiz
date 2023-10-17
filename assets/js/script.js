@@ -20,7 +20,10 @@ var hsPage = document.querySelector("#high-scores");
 var viewhs = document.querySelector("#viewhs");
 
 var highScores = [];
-
+var newScore = {
+    score: 0,
+    initials: ''
+}
 var storedHS = [];
 
 var hsList = document.querySelector("#hsList");

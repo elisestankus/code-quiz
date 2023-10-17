@@ -204,6 +204,26 @@ var incorrectans0q3 = document.querySelector("#incorrect0Q3")
 var incorrectans1q3 = document.querySelector("#incorrect1Q3")
 var incorrectans2q3 = document.querySelector("#incorrect2Q3")
 
+correctansq3.addEventListener("click", function() {
+    showQ4();
+    correctMessage();
+})
+
+incorrectans0q3.addEventListener("click", function() {
+    showQ4();
+    incorrectMessage();
+})
+
+incorrectans1q3.addEventListener("click", function() {
+    showQ4();
+    incorrectMessage();
+})
+
+incorrectans2q3.addEventListener("click", function() {
+    showQ4();
+    incorrectMessage();
+})
+
 //Q4
 
 var correctansq4 = document.querySelector("#correctQ4");

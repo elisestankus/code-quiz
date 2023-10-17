@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+#Q1 {
+    display:none;
+}
+
+#Q2 {
+    display: none;
+}
+
+#Q3 {
+    display: none;
+}
+
+#Q4 {
+    display: none;
+}
+
+#Q5 {
+    display: none;
+}
+
+#endPage {
+    display: none;
+}
+
+#prevQcorrect {
+    display: none;
+}
+
+#prevQincorrect {
+    display: none;
+}
+
+#high-scores {
+    display: none;
+}

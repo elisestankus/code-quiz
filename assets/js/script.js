@@ -48,7 +48,14 @@ function setTime() {
 
 }
 
-
+function showIntro() {
+    hsPage.style.display = "none";
+    prevQincorrect.style.display= "none";
+    prevQcorrect.style.display = "none";
+    intro.style.display = "block";
+    secondsLeft = 75;
+    timeEl.textContent = "Time: " + secondsLeft;
+}
 
 function showQ1() {
     intro.style.display = "none";
@@ -73,6 +80,18 @@ function showQ4() {
 function showQ5() {
     Q4.style.display = "none";
     Q5.style.display = "block";
+}
+
+
+function showendPage() {
+    Q1.style.display = "none";
+    Q2.style.display = "none";
+    Q3.style.display = "none";
+    Q4.style.display = "none";
+    Q5.style.display = "none";
+    endPage.style.display = "block";
+    clearInterval(timerInterval);
+    score.textContent = "Your final score is " + secondsLeft + "!";
 }
 
 //Q1

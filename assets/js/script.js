@@ -82,6 +82,14 @@ function showQ5() {
     Q5.style.display = "block";
 }
 
+function showhs() {
+    hsPage.style.display = "block";
+    endPage.style.display = "none";
+    intro.style.display = "none";
+    prevQincorrect.style.display= "none";
+    prevQcorrect.style.display = "none";
+}
+
 function incorrectMessage() {
     secondsLeft = secondsLeft -10;
     prevQincorrect.style.display= "block";
@@ -115,6 +123,20 @@ function storeHS() {
     storedHS = JSON.parse(localStorage.getItem("highScores"));
     console.log(storedHS)
 }
+
+function updateHS() {
+    hsList.innerHTML = "";
+    for (var i = 0; i < highScores.length; i++) {
+        newScore = highScores[i];
+    
+        var li = document.createElement("li");
+        li.textContent = newScore.initials + ": " + newScore.score;
+        li.setAttribute("data-index", i);
+    
+        hsList.appendChild(li);
+      }
+}
+
 
 //Q1
 

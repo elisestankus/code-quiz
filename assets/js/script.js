@@ -48,6 +48,33 @@ function setTime() {
 
 }
 
+
+
+function showQ1() {
+    intro.style.display = "none";
+    Q1.style.display = "block";
+}
+
+function showQ2() {
+    Q1.style.display = "none";
+    Q2.style.display = "block";
+}
+
+function showQ3() {
+    Q2.style.display = "none";
+    Q3.style.display = "block";
+}
+
+function showQ4() {
+    Q3.style.display = "none";
+    Q4.style.display = "block";
+}
+
+function showQ5() {
+    Q4.style.display = "none";
+    Q5.style.display = "block";
+}
+
 //Q1
 
 var correctansq1 = document.querySelector("#correctQ1");

@@ -82,6 +82,17 @@ function showQ5() {
     Q5.style.display = "block";
 }
 
+function incorrectMessage() {
+    secondsLeft = secondsLeft -10;
+    prevQincorrect.style.display= "block";
+    prevQcorrect.style.display = "none";
+}
+
+function correctMessage() {
+    prevQcorrect.style.display= "block";
+    prevQincorrect.style.display = "none";
+}
+
 
 function showendPage() {
     Q1.style.display = "none";

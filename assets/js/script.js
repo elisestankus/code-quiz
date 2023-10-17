@@ -150,6 +150,26 @@ var incorrectans0q1 = document.querySelector("#incorrect0Q1")
 var incorrectans1q1 = document.querySelector("#incorrect1Q1")
 var incorrectans2q1 = document.querySelector("#incorrect2Q1")
 
+correctansq1.addEventListener("click", function() {
+    showQ2();
+    correctMessage();
+})
+
+incorrectans0q1.addEventListener("click", function() {
+    showQ2();
+    incorrectMessage();
+})
+
+incorrectans1q1.addEventListener("click", function() {
+    showQ2();
+    incorrectMessage();
+})
+
+incorrectans2q1.addEventListener("click", function() {
+    showQ2();
+    incorrectMessage();
+})
+
 //Q2
 
 var correctansq2 = document.querySelector("#correctQ2");

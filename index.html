@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <header>
+        <button id="viewhs">View high scores</button>
+        <h3 id="time">Time:</h3>
+      </header>
+      <main>
+    <section id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <button id="start">start quiz</button>
+      </section>
+      <section id="Q1">
+        <h2>1. A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+        <button id="incorrect0Q1">Javascript</button>
+        <button id="correctQ1">console.log</button>
+        <button id="incorrect1Q1">terminal/bash</button>
+        <button id="incorrect2Q1">for loops</button>
+      </section>
+      <section id="Q2">
+        <h2>2. Commonly used data types do NOT include:</h2>
+        <button id="incorrect0Q2">strings</button>
+        <button id="incorrect1Q2">booleans</button>
+        <button id="correctQ2">alerts</button>
+        <button id="incorrect2Q2">numbers</button>
+      </section>
+      <section id="Q3">
+        <h2>3. String values must be enclosed within ______ when being assigned to variables.</h2>
+        <button id="incorrect0Q3">commas</button>
+        <button id="correctQ3">quotes</button>
+        <button id="incorrect1Q3">curly brackets</button>
+        <button id="incorrect2Q3">parenthesis</button>
+      </section>
+      <section id="Q4">
+        <h2>4. The condition in an if/else statement is enclosed with ______.</h2>
+        <button id="incorrect0Q4">quotes</button>
+        <button id="incorrect1Q4">curly brackets</button>
+        <button id="incorrect2Q4">square brackets</button>
+        <button id="correctQ4">parenthesis</button>
+      </section>
+      <section id="Q5">
+        <h2>5. Arrays in JavaScript can be used to store ______.</h2>
+        <button id="incorrect0Q5">numbers and strings</button>
+        <button id="incorrect1Q5">other arrays</button>
+        <button id="incorrect2Q5">booleans</button>
+        <button id="correctQ5">all of the above</button>
+      </section>
+      <section id="endPage">
+        <h2>All done!</h2>
+        <p id="score"></p>
+        <form method="POST">
+          <label for="yourInitials">Enter initials: </label>
+          <input type="text" placeholder="Your initials" name="yourInitials" id="yourInitials" />
+          <button id="submitScore">submit</button>
+        </form>
+      </section>
+      <section id="high-scores">
+        <h2>High Scores:</h2>
+        <ol id="hsList">
+        </ol>
+        <button id="back">back</button>
+      </section>
+      <div id="prevQcorrect">Correct!</div>
+      <div id="prevQincorrect">Incorrect 😕</div>
+      </main>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

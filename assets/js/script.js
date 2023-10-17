@@ -110,6 +110,12 @@ function submitNewScore() {
     console.log(highScores)
 }
 
+function storeHS() {
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    storedHS = JSON.parse(localStorage.getItem("highScores"));
+    console.log(storedHS)
+}
+
 //Q1
 
 var correctansq1 = document.querySelector("#correctQ1");

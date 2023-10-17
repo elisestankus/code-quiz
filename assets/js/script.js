@@ -1,3 +1,5 @@
+//declared my variables globally so they are available to all functions that need them
+//these variables allow the JS to access the html elements
 var start = document.querySelector("#start")
 
 var intro = document.querySelector("#intro")
@@ -29,6 +31,112 @@ var storedHS = [];
 var hsList = document.querySelector("#hsList");
 
 var backBTN = document.querySelector("#back")
+
+//this function starts the timer when it is called -- tells the secondsLeft variable to decrease by 1 each second and assigns the text content for the timeEl
+//the if statement makes the timer stop and calls the showendPage function if the user runs out of time on their quiz
+function setTime() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeEl.textContent = "Time: " + secondsLeft;
+        
+        
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            showendPage ();
+        }
+    }, 1000);
+
+}
+
+function showIntro() {
+    hsPage.style.display = "none";
+    prevQincorrect.style.display= "none";
+    prevQcorrect.style.display = "none";
+    intro.style.display = "block";
+    secondsLeft = 75;
+    timeEl.textContent = "Time: " + secondsLeft;
+}
+
+function showQ1() {
+    intro.style.display = "none";
+    Q1.style.display = "block";
+}
+
+function showQ2() {
+    Q1.style.display = "none";
+    Q2.style.display = "block";
+}
+
+function showQ3() {
+    Q2.style.display = "none";
+    Q3.style.display = "block";
+}
+
+function showQ4() {
+    Q3.style.display = "none";
+    Q4.style.display = "block";
+}
+
+function showQ5() {
+    Q4.style.display = "none";
+    Q5.style.display = "block";
+}
+
+function showhs() {
+    hsPage.style.display = "block";
+    endPage.style.display = "none";
+    intro.style.display = "none";
+    prevQincorrect.style.display= "none";
+    prevQcorrect.style.display = "none";
+}
+
+function incorrectMessage() {
+    secondsLeft = secondsLeft -10;
+    prevQincorrect.style.display= "block";
+    prevQcorrect.style.display = "none";
+}
+
+function correctMessage() {
+    prevQcorrect.style.display= "block";
+    prevQincorrect.style.display = "none";
+}
+
+
+function showendPage() {
+    Q1.style.display = "none";
+    Q2.style.display = "none";
+    Q3.style.display = "none";
+    Q4.style.display = "none";
+    Q5.style.display = "none";
+    endPage.style.display = "block";
+    clearInterval(timerInterval);
+    score.textContent = "Your final score is " + secondsLeft + "!";
+}
+
+function submitNewScore() {
+    highScores.push(newScore);
+    console.log(highScores)
+}
+
+function storeHS() {
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    storedHS = JSON.parse(localStorage.getItem("highScores"));
+    console.log(storedHS)
+}
+
+function updateHS() {
+    hsList.innerHTML = "";
+    for (var i = 0; i < highScores.length; i++) {
+        newScore = highScores[i];
+    
+        var li = document.createElement("li");
+        li.textContent = newScore.initials + ": " + newScore.score;
+        li.setAttribute("data-index", i);
+    
+        hsList.appendChild(li);
+      }
+}
+
 
 //Q1
 

@@ -13,6 +13,7 @@ var submitScore = document.querySelector("#submitScore")
 var initialsInput = document.querySelector("#yourInitials")
 
 var timeEl = document.querySelector("#time")
+var secondsLeft = 75;
 
 var hsPage = document.querySelector("#high-scores");
 var viewhs = document.querySelector("#viewhs");

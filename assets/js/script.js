@@ -48,6 +48,11 @@ function setTime() {
 
 }
 
+start.addEventListener("click", function(){
+    setTime();
+    showQ1();
+})
+
 function showIntro() {
     hsPage.style.display = "none";
     prevQincorrect.style.display= "none";

@@ -19,5 +19,8 @@ N/A
 
 ## Link
 
+https://elisestankus.github.io/code-quiz/
 
 ## Screenshot
+
+<img src="./assets/images/code-quiz-screenshot.png" alt="screenshot of code quiz intro page">
